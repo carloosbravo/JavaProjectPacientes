@@ -1,5 +1,7 @@
 package objects;
 
+import java.util.ArrayList;
+
 public class Paciente {
 	private String id;
 	private String nombre;
@@ -7,8 +9,10 @@ public class Paciente {
 	private String apellido2;
 	private String nacimiento;
 	private String residencia;
+	private ArrayList<Cita>citas;
 
-	public Paciente(String id, String nombre, String apellido1, String apellido2, String nacimiento,String residencia) {
+	public Paciente( String id, String nombre, String apellido1, String apellido2, String nacimiento,String residencia) {
+		citas = new ArrayList<Cita>();
 		this.id = id;
 		this.nombre = nombre;
 		this.apellido1 = apellido1;
@@ -16,6 +20,17 @@ public class Paciente {
 		this.nacimiento = nacimiento;
 		this.residencia = residencia;
 	}
+	
+
+	public ArrayList<Cita> getCitas() {
+		return citas;
+	}
+
+
+	public void setCitas(ArrayList<Cita> citas) {
+		this.citas = citas;
+	}
+
 
 	public String getId() {
 		return id;

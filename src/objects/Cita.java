@@ -4,12 +4,15 @@ public class Cita {
 	private Paciente paciente;
 	private String hospital;
 	private String departamento;
+	private String doctor;
 	private String fechaCita;
 	private String horaCita;
 
-	public Cita( String hospital, String departamento, String fechaCita, String horaCita) {
+	public Cita(String hospital, String departamento, String doctor, String fechaCita, String horaCita) {
 		
+		this.hospital = hospital;
 		this.departamento = departamento;
+		this.doctor = doctor;
 		this.fechaCita = fechaCita;
 		this.horaCita = horaCita;
 	}
@@ -40,7 +43,14 @@ public class Cita {
 	public void setDepartamento(String departamento) {
 		this.departamento = departamento;
 	}
+	
 
+	public String getDoctor() {
+		return doctor;
+	}
+	public void setDoctor(String doctor) {
+		this.doctor = doctor;
+	}
 	public String getFechaCita() {
 		return fechaCita;
 	}
